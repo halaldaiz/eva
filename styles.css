@@ -1,0 +1,218 @@
+@import url('https://fonts.cdnfonts.com/css/gochi-hand');
+@import url('https://fonts.cdnfonts.com/css/lilita-one');
+@import url('https://fonts.cdnfonts.com/css/titillium-web');
+
+#logo {
+    font-family: 'Gochi Hand', sans-serif;
+    color: #000;
+    font-size: 120px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#menu {
+    text-align: center;
+}
+
+#menu a {
+    text-transform: uppercase;
+    font-family: 'Lilita One', sans-serif;
+    color: #000;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+    position: relative;
+}
+
+#menu a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fdd100;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+#menu a:hover {
+    color: #fdd100;
+}
+
+#menu a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+hr {
+    border: none;
+    border-top: 4px solid #fdd100;
+    margin: 40px auto; 
+    width: 50%;
+}
+
+#intro {
+    text-align: center;
+    font-family: 'Lilita One', sans-serif;
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.intro-text {
+    font-family: 'Lilita One', sans-serif;
+    font-size: 24px;
+    color: #000;
+    margin-top: 10px;
+}
+
+#skills {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#skills h2 {
+    font-family: 'Lilita One', sans-serif;
+    font-size: 36px;
+    color: #000;
+}
+
+.technical-skills,
+.soft-skills {
+    margin-top: 20px;
+    display: inline-block;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+.technical-skills h3,
+.soft-skills h3 {
+    font-family: 'Lilita One', sans-serif;
+    font-size: 24px;
+    color: #000;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+#projects {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#projects h2 {
+    font-family: 'Lilita One', sans-serif;
+    font-size: 36px;
+    color: #000;
+    width: 100%;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.project-grid a {
+    text-decoration: none;
+    color: #000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-grid a:hover {
+    transform: scale(1.05);
+}
+
+.project-grid img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #fdd100;
+    border-radius: 10px;
+    max-height: 200px;
+}
+
+#contact {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#contact h2 {
+    font-family: 'Lilita One', sans-serif;
+    font-size: 36px;
+    color: #000;
+    width: 100%;
+}
+
+#contact p {
+    font-family: 'Lilita One', sans-serif;
+    font-size: 20px;
+    color: #333;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin: 10px;
+    display: inline;
+}
+
+.contact-list a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-list a:hover {
+    color: #fdd100;
+}
+
+#highlight-text {
+    background-color: #fdd100; 
+    color: #000; 
+    padding: 2px 5px; 
+}
+
+@media (max-width: 768px) {
+    #menu a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    hr {
+        width: 80%;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .technical-skills,
+    .soft-skills {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
